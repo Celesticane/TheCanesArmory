@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "thecanesarmory:encorium_scrap"
+    },
+    {
+      "item": "thecanesarmory:encorium_scrap"
+    },
+    {
+      "item": "thecanesarmory:encorium_scrap"
+    },
+    {
+      "item": "thecanesarmory:encorium_scrap"
+    },
+    {
+      "item": "minecraft:netherite_ingot"
+    },
+    {
+      "item": "minecraft:netherite_ingot"
+    },
+    {
+      "item": "minecraft:popped_chorus_fruit"
+    },
+    {
+      "item": "minecraft:popped_chorus_fruit"
+    }
+  ],
+  "result": {
+    "item": "thecanesarmory:encorium_ingot"
+  }
+}

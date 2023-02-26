@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smithing",
+  "addition": {
+    "item": "thecanesarmory:encorium_ingot"
+  },
+  "base": {
+    "item": "minecraft:netherite_helmet"
+  },
+  "result":{
+    "item": "thecanesarmory:encorium_helmet"
+  }
+
+}
