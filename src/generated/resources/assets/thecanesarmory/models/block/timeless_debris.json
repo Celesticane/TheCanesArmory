@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "thecanesarmory:block/timeless_debris_top",
+    "side": "thecanesarmory:block/timeless_debris"
+  }
+}

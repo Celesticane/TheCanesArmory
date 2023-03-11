@@ -10,6 +10,10 @@ public class ModTags {
     public static class Blocks {
         public static final TagKey<Block> NEEDS_ENCORIUM_TOOL
                 = tag("needs_encorium_tool");
+
+        public static final TagKey<Block> RELIC_DETECTABLE
+                = tag("relic_detectable");
+
         private static TagKey<Block> tag(String name) {
             return BlockTags.create(new ResourceLocation(CanesArmory.MODID, name));
         }
