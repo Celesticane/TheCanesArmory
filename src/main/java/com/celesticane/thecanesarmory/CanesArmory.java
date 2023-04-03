@@ -55,12 +55,16 @@ public class CanesArmory
             event.accept(ModItems.ENCORIUM);
         }
         if(event.getTab() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
+            event.accept(ModItems.NETHERITE_DETECTOR);
+            event.accept(ModItems.ENCORIUM_DETECTOR);
             event.accept(ModItems.ENCORIUM_SHOVEL);
             event.accept(ModItems.ENCORIUM_PICKAXE);
             event.accept(ModItems.ENCORIUM_AXE);
             event.accept(ModItems.ENCORIUM_HOE);
         }
         if(event.getTab() == CreativeModeTabs.COMBAT) {
+            event.accept(ModItems.AGILE_SWORD);
+            event.accept(ModItems.OBSIDIAN_SWORD);
             event.accept(ModItems.ENCORIUM_SWORD);
             event.accept(ModItems.ENCORIUM_HELMET);
             event.accept(ModItems.ENCORIUM_CHESTPLATE);

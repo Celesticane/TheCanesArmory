@@ -1,6 +1,7 @@
 package com.celesticane.thecanesarmory.item;
 
 import com.celesticane.thecanesarmory.CanesArmory;
+import com.celesticane.thecanesarmory.item.custom.RelicDetectorItem;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -11,8 +12,13 @@ import net.minecraftforge.registries.RegistryObject;
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, CanesArmory.MODID);
 
-
-    //Timeless Debris and Encorium-related items
+    public static final RegistryObject<Item> AGILE_SWORD = ITEMS.register("agile_sword",
+            () -> new SwordItem(Tiers.IRON, 3, -1.8f,
+                    new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> OBSIDIAN_SWORD = ITEMS.register("obsidian_sword",
+            () -> new SwordItem(ModToolTiers.OBSIDIAN, 3, -2.4f,
+                    new Item.Properties().stacksTo(1)));
+        //Timeless Debris and Encorium-related items
         public static final RegistryObject<Item> ENCORIUM = ITEMS.register("encorium_ingot",
                 () -> new Item(new Item.Properties().fireResistant().rarity(Rarity.UNCOMMON)));
 
@@ -37,9 +43,6 @@ public class ModItems {
         public static final RegistryObject<Item> ENCORIUM_HOE = ITEMS.register("encorium_hoe",
                 () -> new HoeItem(ModToolTiers.ENCORIUM, -4, 0f,
                         new Item.Properties().fireResistant().rarity(Rarity.UNCOMMON).stacksTo(1)));
-
-
-
         public static final RegistryObject<Item> ENCORIUM_HELMET = ITEMS.register("encorium_helmet",
             () -> new ArmorItem(ModArmorMaterials.ENCORIUM, EquipmentSlot.HEAD,
                     new Item.Properties().fireResistant().rarity(Rarity.UNCOMMON).stacksTo(1)));
@@ -52,6 +55,11 @@ public class ModItems {
         public static final RegistryObject<Item> ENCORIUM_BOOTS = ITEMS.register("encorium_boots",
             () -> new ArmorItem(ModArmorMaterials.ENCORIUM, EquipmentSlot.FEET,
                     new Item.Properties().fireResistant().rarity(Rarity.UNCOMMON).stacksTo(1)));
+        //Relic Detectors
+        public static final RegistryObject<RelicDetectorItem> NETHERITE_DETECTOR = ITEMS.register("relic_detector",
+            () -> new RelicDetectorItem(new Item.Properties().fireResistant().stacksTo(1), 2, 1));
+        public static final RegistryObject<RelicDetectorItem> ENCORIUM_DETECTOR = ITEMS.register("relic_detector_plus",
+            () -> new RelicDetectorItem(new Item.Properties().fireResistant().rarity(Rarity.UNCOMMON).stacksTo(1), 2, 1));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

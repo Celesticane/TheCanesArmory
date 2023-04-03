@@ -2,6 +2,7 @@ package com.celesticane.thecanesarmory.datagen;
 
 import com.celesticane.thecanesarmory.CanesArmory;
 import com.celesticane.thecanesarmory.item.ModItems;
+import com.celesticane.thecanesarmory.item.custom.RelicDetectorItem;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
@@ -23,11 +24,15 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.ENCORIUM_CHESTPLATE);
         simpleItem(ModItems.ENCORIUM_LEGGINGS);
         simpleItem(ModItems.ENCORIUM_BOOTS);
+        simpleHandheldItem(ModItems.AGILE_SWORD);
+        simpleHandheldItem(ModItems.OBSIDIAN_SWORD);
         simpleHandheldItem(ModItems.ENCORIUM_SWORD);
         simpleHandheldItem(ModItems.ENCORIUM_SHOVEL);
         simpleHandheldItem(ModItems.ENCORIUM_PICKAXE);
         simpleHandheldItem(ModItems.ENCORIUM_AXE);
         simpleHandheldItem(ModItems.ENCORIUM_HOE);
+        detectorItem(ModItems.NETHERITE_DETECTOR);
+        detectorItem(ModItems.ENCORIUM_DETECTOR);
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {
@@ -38,6 +43,12 @@ public class ModItemModelProvider extends ItemModelProvider {
     }
 
     private ItemModelBuilder simpleHandheldItem(RegistryObject<Item> item) {
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/handheld")).texture("layer0",
+                new ResourceLocation(CanesArmory.MODID, "item/" + item.getId().getPath()));
+
+    }
+    private ItemModelBuilder detectorItem(RegistryObject<RelicDetectorItem> item) {
         return withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/handheld")).texture("layer0",
                 new ResourceLocation(CanesArmory.MODID, "item/" + item.getId().getPath()));

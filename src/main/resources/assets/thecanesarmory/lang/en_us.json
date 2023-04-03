@@ -1,4 +1,7 @@
 {
+  "item.thecanesarmory.agile_sword": "Agile Sword",
+  "item.thecanesarmory.obsidian_sword": "Obsidian Sword",
+
   "block.thecanesarmory.timeless_debris": "Timeless Debris",
   "block.thecanesarmory.encorium_block": "Block of Encorium",
   "item.thecanesarmory.encorium_scrap": "Encorium Scrap",
@@ -12,6 +15,8 @@
   "item.thecanesarmory.encorium_helmet": "Encorium Helmet",
   "item.thecanesarmory.encorium_chestplate": "Encorium Chestplate",
   "item.thecanesarmory.encorium_leggings": "Encorium Leggings",
-  "item.thecanesarmory.encorium_boots": "Encorium Boots"
+  "item.thecanesarmory.encorium_boots": "Encorium Boots",
 
+  "item.thecanesarmory.relic_detector": "Relic Detector",
+  "item.thecanesarmory.relic_detector_plus": "Relic Detector+"
 }

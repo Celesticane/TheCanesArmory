@@ -115,6 +115,17 @@ minecraft {
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
+    maven {
+        url "https://www.cursemaven.com"
+        content {
+            includeGroup "curse.maven"
+        }
+    }
+    maven  {
+        name = "Jared's maven"
+        url = "https://maven.blamejared.com"
+    }
+
     // Put repositories for dependencies here
     // ForgeGradle automatically adds the Forge maven and Maven Central for you
 
@@ -128,11 +139,15 @@ dependencies {
     // Specify the version of Minecraft to use. If this is any group other than 'net.minecraft', it is assumed
     // that the dep is a ForgeGradle 'patcher' dependency, and its patches will be applied.
     // The userdev artifact is a special name and will get all sorts of transformations applied to it.
-    minecraft 'net.minecraftforge:forge:1.19.3-44.1.17'
+    minecraft 'net.minecraftforge:forge:1.19.3-44.1.23'
+
+    implementation fg.deobf("curse.maven:worldstipper-250603:4256260")
 
     // Real mod deobf dependency examples - these get remapped to your current mappings
-    // compileOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}:api") // Adds JEI API as a compile dependency
-    // runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}") // Adds the full JEI mod as a runtime dependency
+    compileOnly(fg.deobf("mezz.jei:jei-1.19.3-common-api:12.3.0.19"))
+    compileOnly(fg.deobf("mezz.jei:jei-1.19.3-forge-api:12.3.0.19"))
+
+    runtimeOnly(fg.deobf("mezz.jei:jei-1.19.3-forge:12.3.0.19"))
     // implementation fg.deobf("com.tterrag.registrate:Registrate:MC${mc_version}-${registrate_version}") // Adds registrate as a dependency
 
     // Examples using mod jars from ./libs

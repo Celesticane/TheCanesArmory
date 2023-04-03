@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smithing",
+  "addition": {
+    "item": "thecanesarmory:encorium_ingot"
+  },
+  "base": {
+    "item": "thecanesarmory:relic_detector"
+  },
+  "result":{
+    "item": "thecanesarmory:relic_detector_plus"
+  }
+
+}

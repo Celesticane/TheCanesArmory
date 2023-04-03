@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smithing",
+  "addition": {
+    "item": "minecraft:redstone_block"
+  },
+  "base": {
+    "item": "minecraft:iron_sword"
+  },
+  "result":{
+    "item": "thecanesarmory:agile_sword"
+  }
+
+}

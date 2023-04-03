@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smithing",
+  "addition": {
+    "item": "minecraft:obsidian"
+  },
+  "base": {
+    "item": "minecraft:stone_sword"
+  },
+  "result":{
+    "item": "thecanesarmory:obsidian_sword"
+  }
+
+}
