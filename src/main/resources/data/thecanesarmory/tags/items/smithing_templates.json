@@ -1,0 +1,7 @@
+ {
+     "replace": false,
+     "values": [
+       "minecraft:armor_trims",
+       "minecraft:netherite_upgrade_smithing_template"
+    ]
+}
