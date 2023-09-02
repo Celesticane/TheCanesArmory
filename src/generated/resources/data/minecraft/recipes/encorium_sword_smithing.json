@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "thecanesarmory:encorium_ingot"
+  },
+  "base": {
+    "item": "minecraft:netherite_sword"
+  },
+  "result": {
+    "item": "thecanesarmory:encorium_sword"
+  },
+  "template": {
+    "item": "thecanesarmory:encorium_upgrade_smithing_template"
+  }
+}

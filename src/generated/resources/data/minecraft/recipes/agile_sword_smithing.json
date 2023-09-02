@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:redstone_block"
+  },
+  "base": {
+    "item": "minecraft:iron_sword"
+  },
+  "result": {
+    "item": "thecanesarmory:agile_sword"
+  },
+  "template": {
+    "item": "thecanesarmory:canes_upgrade_smithing_template"
+  }
+}

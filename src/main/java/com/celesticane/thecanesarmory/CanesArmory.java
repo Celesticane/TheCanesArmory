@@ -86,6 +86,8 @@ public class CanesArmory
             event.accept(ModBlocks.TIMELESS_DEBRIS);
             event.accept(ModItems.RAW_ENCORIUM);
             event.accept(ModItems.ENCORIUM);
+            event.accept(ModItems.CANES_TEMPLATE_ITEM);
+            event.accept(ModItems.ENCORIUM_TEMPLATE_ITEM);
             event.accept(ModItems.TEMPLATE_BLANK);
         }
         if(event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {

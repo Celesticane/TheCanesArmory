@@ -34,6 +34,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         detectorItem(ModItems.NETHERITE_DETECTOR);
         detectorItem(ModItems.ENCORIUM_DETECTOR);
         simpleItem(ModItems.TEMPLATE_BLANK);
+        simpleItem(ModItems.ENCORIUM_TEMPLATE_ITEM);
+        simpleItem(ModItems.CANES_TEMPLATE_ITEM);
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {

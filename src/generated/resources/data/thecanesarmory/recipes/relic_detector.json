@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "c": {
+      "item": "minecraft:compass"
+    },
+    "g": {
+      "item": "minecraft:gold_nugget"
+    },
+    "n": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "p": {
+      "item": "minecraft:glass_pane"
+    },
+    "t": {
+      "item": "minecraft:redstone_torch"
+    }
+  },
+  "pattern": [
+    "tpt",
+    "gcg",
+    " n "
+  ],
+  "result": {
+    "item": "thecanesarmory:relic_detector"
+  },
+  "show_notification": true
+}

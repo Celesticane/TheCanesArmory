@@ -25,7 +25,10 @@ public class ModItems {
         public static final RegistryObject<Item> RAW_ENCORIUM = ITEMS.register("encorium_scrap",
                 () -> new Item(new Item.Properties().fireResistant()));
 
-
+        public static final RegistryObject<Item> ENCORIUM_TEMPLATE_ITEM = ITEMS.register("encorium_upgrade_smithing_template",
+                ModSmithingTemplates::createEncoriumUpgradeTemplate);
+        public static final RegistryObject<Item> CANES_TEMPLATE_ITEM = ITEMS.register("canes_upgrade_smithing_template",
+                ModSmithingTemplates::createCanesUpgradeTemplate);
         public static final RegistryObject<Item> ENCORIUM_SWORD = ITEMS.register("encorium_sword",
                 () -> new SwordItem(ModToolTiers.ENCORIUM, 3, -2.4f,
                         new Item.Properties().fireResistant().rarity(Rarity.UNCOMMON).stacksTo(1)));

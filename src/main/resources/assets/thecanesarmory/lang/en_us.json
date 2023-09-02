@@ -20,5 +20,18 @@
   "item.thecanesarmory.relic_detector": "Relic Detector",
   "item.thecanesarmory.relic_detector_plus": "Relic Detector+",
 
-  "item.thecanesarmory.smithing_template_blank": "Smithing Template Blank"
+  "item.thecanesarmory.smithing_template_blank": "Smithing Template Blank",
+  "item.thecanesarmory.encorium_upgrade_smithing_template": "Smithing Template",
+
+  "upgrade.minecraft.encorium_upgrade": "Encorium Upgrade",
+  "item.thecanesarmory.smithing_template.encorium_upgrade.applies_to": "Netherite Equipment",
+  "item.thecanesarmory.smithing_template.encorium_upgrade.ingredients": "Encorium Ingot",
+  "item.thecanesarmory.smithing_template.encorium_upgrade.base_slot_description": "Add netherite armor, weapon, or tool",
+  "item.thecanesarmory.smithing_template.encorium_upgrade.additions_slot_description": "Add Encorium Ingot",
+
+  "upgrade.minecraft.canes_upgrade": "The Cane's Upgrade",
+  "item.thecanesarmory.smithing_template.canes_upgrade.applies_to": "Tools & Equipment",
+  "item.thecanesarmory.smithing_template.canes_upgrade.ingredients": "???",
+  "item.thecanesarmory.smithing_template.canes_upgrade.base_slot_description": "Add armor, weapon, or tool",
+  "item.thecanesarmory.smithing_template.canes_upgrade.additions_slot_description": "Add ???"
 }
