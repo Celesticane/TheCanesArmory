@@ -33,9 +33,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> consumer) {
         nineBlockStorageRecipes(consumer, RecipeCategory.BUILDING_BLOCKS, ModItems.ENCORIUM.get(), RecipeCategory.MISC, ModBlocks.ENCORIUM_BLOCK.get());
-        /*for (Item item : ModTags.Items.SMITHING_TEMPLATES) {
-            copyTemplateViaBlank(item).save(consumer);
-        }*/
+        copySmithingTemplate(consumer, ModItems.CANES_TEMPLATE_ITEM.get(), Items.GOLD_BLOCK);
+        //for (Item item : ModTags.Items.SMITHING_TEMPLATES) {
+        //   copyTemplateViaBlank(item).save(consumer);
+        //}
         encoriumSmithing(consumer, Items.NETHERITE_SWORD, RecipeCategory.COMBAT, ModItems.ENCORIUM_SWORD.get());
         encoriumSmithing(consumer, Items.NETHERITE_SHOVEL, RecipeCategory.TOOLS, ModItems.ENCORIUM_SHOVEL.get());
         encoriumSmithing(consumer, Items.NETHERITE_PICKAXE, RecipeCategory.TOOLS, ModItems.ENCORIUM_PICKAXE.get());
@@ -48,6 +49,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         encoriumSmithing(consumer, Items.NETHERITE_BOOTS, RecipeCategory.COMBAT, ModItems.ENCORIUM_BOOTS.get());
         canesSmithing(consumer, Items.IRON_SWORD, Items.REDSTONE_BLOCK, RecipeCategory.COMBAT, ModItems.AGILE_SWORD.get());
         canesSmithing(consumer, Items.STONE_SWORD, Items.OBSIDIAN, RecipeCategory.COMBAT, ModItems.OBSIDIAN_SWORD.get());
+        //canesSmithing(consumer, Items.SHIELD, Items.DIAMOND, RecipeCategory.COMBAT, ModItems.DIAMOND_SHIELD.get());
 
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.ENCORIUM_TEMPLATE_ITEM.get())
                 .define('n', Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE)

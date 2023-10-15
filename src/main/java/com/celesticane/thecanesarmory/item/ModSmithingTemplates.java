@@ -42,7 +42,7 @@ public class ModSmithingTemplates extends Item {
     private static final Component ENCORIUM_UPGRADE_BASE_SLOT_DESCRIPTION = Component.translatable(Util.makeDescriptionId("item", new ResourceLocation(CanesArmory.MODID, "smithing_template.encorium_upgrade.base_slot_description")));
     private static final Component ENCORIUM_UPGRADE_ADDITIONS_SLOT_DESCRIPTION = Component.translatable(Util.makeDescriptionId("item", new ResourceLocation(CanesArmory.MODID, "smithing_template.encorium_upgrade.additions_slot_description")));
 
-    private static final Component CANES_UPGRADE = Component.translatable(Util.makeDescriptionId("upgrade", new ResourceLocation("encorium_upgrade"))).withStyle(TITLE_FORMAT);
+    private static final Component CANES_UPGRADE = Component.translatable(Util.makeDescriptionId("upgrade", new ResourceLocation("canes_upgrade"))).withStyle(TITLE_FORMAT);
     private static final Component CANES_UPGRADE_APPLIES_TO = Component.translatable(Util.makeDescriptionId("item", new ResourceLocation(CanesArmory.MODID,"smithing_template.canes_upgrade.applies_to"))).withStyle(DESCRIPTION_FORMAT);
     private static final Component CANES_UPGRADE_INGREDIENTS = Component.translatable(Util.makeDescriptionId("item", new ResourceLocation(CanesArmory.MODID, "smithing_template.canes_upgrade.ingredients"))).withStyle(DESCRIPTION_FORMAT);
     private static final Component CANES_UPGRADE_BASE_SLOT_DESCRIPTION = Component.translatable(Util.makeDescriptionId("item", new ResourceLocation(CanesArmory.MODID, "smithing_template.canes_upgrade.base_slot_description")));

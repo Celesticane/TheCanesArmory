@@ -1,0 +1,15 @@
+{
+  "type": "thecanesarmory:add_item",
+  "conditions": [
+    {
+      "condition": "forge:loot_table_id",
+      "loot_table_id": "minecraft:entities/rabbit"
+    },
+    {
+      "chance": 0.04,
+      "condition": "minecraft:random_chance_with_looting",
+      "looting_multiplier": 0.04
+    }
+  ],
+  "item": "thecanesarmory:canes_upgrade_smithing_template"
+}

@@ -1,0 +1,28 @@
+{
+  "entries": [
+    "thecanesarmory:cane_template_bastion_bridge",
+    "thecanesarmory:cane_template_bonus",
+    "thecanesarmory:cane_template_what",
+    "thecanesarmory:cane_template_outpost",
+    "thecanesarmory:cane_template_dungeon",
+    "thecanesarmory:cane_template_toolsmith",
+    "thecanesarmory:cane_template_buried_treasure",
+    "thecanesarmory:cane_template_mineshaft",
+    "thecanesarmory:cane_template_stronghold",
+    "thecanesarmory:cane_template_blacksmith",
+    "thecanesarmory:cane_template_village_cartographer",
+    "thecanesarmory:cane_template_village_weaponsmith",
+    "thecanesarmory:cane_template_desert_village",
+    "thecanesarmory:cane_template_portal",
+    "thecanesarmory:cane_template_rabbithunt",
+    "thecanesarmory:cane_template_netherfort",
+    "thecanesarmory:cane_template_bastion",
+    "thecanesarmory:cane_template_desert",
+    "thecanesarmory:cane_template_taiga_village",
+    "thecanesarmory:cane_template_snowy_village",
+    "thecanesarmory:cane_template_savanna_village",
+    "thecanesarmory:cane_template_plains_village",
+    "thecanesarmory:cane_template_village_armorer"
+  ],
+  "replace": false
+}

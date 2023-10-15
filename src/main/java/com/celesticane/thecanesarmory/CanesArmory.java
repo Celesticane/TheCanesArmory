@@ -1,7 +1,9 @@
 package com.celesticane.thecanesarmory;
 
 import com.celesticane.thecanesarmory.block.ModBlocks;
+import com.celesticane.thecanesarmory.event.ModEvents;
 import com.celesticane.thecanesarmory.item.ModItems;
+import com.celesticane.thecanesarmory.loot.ModLootModifiers;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.Registries;
@@ -55,6 +57,7 @@ public class CanesArmory
 
         ModBlocks.register(modEventBus);
         ModItems.register(modEventBus);
+        ModLootModifiers.register(modEventBus);
         MinecraftForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::addCreative);
         // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
@@ -101,6 +104,7 @@ public class CanesArmory
         if(event.getTabKey() == CreativeModeTabs.COMBAT) {
             event.accept(ModItems.AGILE_SWORD);
             event.accept(ModItems.OBSIDIAN_SWORD);
+            //event.accept(ModItems.DIAMOND_SHIELD);
             event.accept(ModItems.ENCORIUM_SWORD);
             event.accept(ModItems.ENCORIUM_HELMET);
             event.accept(ModItems.ENCORIUM_CHESTPLATE);
