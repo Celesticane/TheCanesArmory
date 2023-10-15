@@ -104,7 +104,7 @@ public class CanesArmory
         if(event.getTabKey() == CreativeModeTabs.COMBAT) {
             event.accept(ModItems.AGILE_SWORD);
             event.accept(ModItems.OBSIDIAN_SWORD);
-            //event.accept(ModItems.DIAMOND_SHIELD);
+            event.accept(ModItems.DIAMOND_SHIELD);
             event.accept(ModItems.ENCORIUM_SWORD);
             event.accept(ModItems.ENCORIUM_HELMET);
             event.accept(ModItems.ENCORIUM_CHESTPLATE);

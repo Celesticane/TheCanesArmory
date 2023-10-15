@@ -1,9 +1,11 @@
 package com.celesticane.thecanesarmory.item;
 
 import com.celesticane.thecanesarmory.CanesArmory;
+import com.celesticane.thecanesarmory.item.custom.DiamondShieldItem;
 import com.celesticane.thecanesarmory.item.custom.RelicDetectorItem;
 import com.celesticane.thecanesarmory.item.ModSmithingTemplates;
 import net.minecraft.world.item.*;
+import net.minecraftforge.common.property.Properties;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -12,12 +14,18 @@ import net.minecraftforge.registries.RegistryObject;
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, CanesArmory.MODID);
 
+    public static final RegistryObject<Item> CANES_TEMPLATE_ITEM = ITEMS.register("canes_upgrade_smithing_template",
+            ModSmithingTemplates::createCanesUpgradeTemplate);
     public static final RegistryObject<Item> AGILE_SWORD = ITEMS.register("agile_sword",
             () -> new SwordItem(Tiers.IRON, 3, -1.8f,
                     new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> OBSIDIAN_SWORD = ITEMS.register("obsidian_sword",
             () -> new SwordItem(ModToolTiers.OBSIDIAN, 0, -2.4f,
                     new Item.Properties().stacksTo(1)));
+
+    public static final RegistryObject<DiamondShieldItem> DIAMOND_SHIELD = ITEMS.register("diamond_shield",
+            () -> new DiamondShieldItem(new Item.Properties().stacksTo(1).durability(1847)));
+
         //Timeless Debris and Encorium-related items
         public static final RegistryObject<Item> ENCORIUM = ITEMS.register("encorium_ingot",
                 () -> new Item(new Item.Properties().fireResistant().rarity(Rarity.UNCOMMON)));
@@ -27,8 +35,7 @@ public class ModItems {
 
         public static final RegistryObject<Item> ENCORIUM_TEMPLATE_ITEM = ITEMS.register("encorium_upgrade_smithing_template",
                 ModSmithingTemplates::createEncoriumUpgradeTemplate);
-        public static final RegistryObject<Item> CANES_TEMPLATE_ITEM = ITEMS.register("canes_upgrade_smithing_template",
-                ModSmithingTemplates::createCanesUpgradeTemplate);
+
         public static final RegistryObject<Item> ENCORIUM_SWORD = ITEMS.register("encorium_sword",
                 () -> new SwordItem(ModToolTiers.ENCORIUM, 3, -2.4f,
                         new Item.Properties().fireResistant().rarity(Rarity.UNCOMMON).stacksTo(1)));

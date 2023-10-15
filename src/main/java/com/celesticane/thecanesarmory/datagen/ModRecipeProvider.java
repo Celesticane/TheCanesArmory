@@ -49,7 +49,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         encoriumSmithing(consumer, Items.NETHERITE_BOOTS, RecipeCategory.COMBAT, ModItems.ENCORIUM_BOOTS.get());
         canesSmithing(consumer, Items.IRON_SWORD, Items.REDSTONE_BLOCK, RecipeCategory.COMBAT, ModItems.AGILE_SWORD.get());
         canesSmithing(consumer, Items.STONE_SWORD, Items.OBSIDIAN, RecipeCategory.COMBAT, ModItems.OBSIDIAN_SWORD.get());
-        //canesSmithing(consumer, Items.SHIELD, Items.DIAMOND, RecipeCategory.COMBAT, ModItems.DIAMOND_SHIELD.get());
+        canesSmithing(consumer, Items.SHIELD, Items.DIAMOND, RecipeCategory.COMBAT, ModItems.DIAMOND_SHIELD.get());
 
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.ENCORIUM_TEMPLATE_ITEM.get())
                 .define('n', Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE)
