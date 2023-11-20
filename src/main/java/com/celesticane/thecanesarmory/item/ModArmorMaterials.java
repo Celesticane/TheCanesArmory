@@ -6,6 +6,7 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.LazyLoadedValue;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 
 import java.util.function.Supplier;
@@ -13,6 +14,9 @@ import java.util.function.Supplier;
 @SuppressWarnings("depreciation")
 public enum ModArmorMaterials implements ArmorMaterial {
 
+    GILDED("gilded", 18, new int[]{3, 6, 7, 2}, 25, SoundEvents.ARMOR_EQUIP_GOLD, 1.0F, 0.0F, () -> {
+        return Ingredient.of(Items.IRON_INGOT);
+    }),
     ENCORIUM("encorium", 45, new int[]{3, 6, 8, 3}, 18, SoundEvents.ARMOR_EQUIP_NETHERITE, 4.0F, 0.3F, () -> {
         return Ingredient.of(ModItems.ENCORIUM.get());
     });

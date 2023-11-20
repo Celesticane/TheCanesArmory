@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:golden_helmet"
+  },
+  "base": {
+    "item": "minecraft:iron_helmet"
+  },
+  "result": {
+    "item": "thecanesarmory:gilded_helmet"
+  },
+  "template": {
+    "item": "thecanesarmory:canes_upgrade_smithing_template"
+  }
+}

@@ -3,6 +3,17 @@
   "item.thecanesarmory.obsidian_sword": "Obsidian Sword",
   "item.thecanesarmory.diamond_shield": "Diamond Shield",
 
+  "item.thecanesarmory.gilded_sword": "Gilded Sword",
+  "item.thecanesarmory.gilded_shovel": "Gilded Shovel",
+  "item.thecanesarmory.gilded_pickaxe": "Gilded Pickaxe",
+  "item.thecanesarmory.gilded_axe": "Gilded Axe",
+  "item.thecanesarmory.gilded_hoe": "Gilded Hoe",
+
+  "item.thecanesarmory.gilded_helmet": "Gilded Helmet",
+  "item.thecanesarmory.gilded_chestplate": "Gilded Chestplate",
+  "item.thecanesarmory.gilded_leggings": "Gilded Leggings",
+  "item.thecanesarmory.gilded_boots": "Gilded Boots",
+
   "block.thecanesarmory.timeless_debris": "Timeless Debris",
   "block.thecanesarmory.encorium_block": "Block of Encorium",
   "item.thecanesarmory.encorium_scrap": "Encorium Scrap",

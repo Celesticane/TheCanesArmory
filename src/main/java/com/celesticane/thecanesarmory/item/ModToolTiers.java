@@ -14,10 +14,15 @@ import net.minecraftforge.common.TierSortingRegistry;
 import java.util.List;
 
 public class ModToolTiers {
+
+    public static Tier GILDED;
     public static Tier OBSIDIAN;
     public static Tier ENCORIUM;
 
     static {
+        GILDED = TierSortingRegistry.registerTier(
+                new ForgeTier(2,377,12.0f,2f,22, Tags.Blocks.STORAGE_BLOCKS_DIAMOND, () -> Ingredient.of(Items.IRON_INGOT)),
+                new ResourceLocation(CanesArmory.MODID, "gilded"), List.of(Tiers.IRON), List.of(Tiers.DIAMOND));
         OBSIDIAN = TierSortingRegistry.registerTier(
                 new ForgeTier(3,16,8.0f,8f,8, Tags.Blocks.OBSIDIAN, () -> Ingredient.of(Items.OBSIDIAN)),
                 new ResourceLocation(CanesArmory.MODID, "obsidian"), List.of(Tiers.IRON), List.of(Tiers.DIAMOND));

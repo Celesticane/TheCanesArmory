@@ -37,6 +37,28 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         //for (Item item : ModTags.Items.SMITHING_TEMPLATES) {
         //   copyTemplateViaBlank(item).save(consumer);
         //}
+
+        //Eventually I'll whip up a more elegant solution for datagenning all these template recipes, but for now this will have to do
+        /* copyTemplateViaBlank(ModItems.CANES_TEMPLATE_ITEM.get()).save(consumer);
+        copyTemplateViaBlank(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE).save(consumer);
+        copyTemplateViaBlank(ModItems.ENCORIUM_TEMPLATE_ITEM.get()).save(consumer);
+        copyTemplateViaBlank(Items.SENTRY_ARMOR_TRIM_SMITHING_TEMPLATE).save(consumer);
+        copyTemplateViaBlank(Items.VEX_ARMOR_TRIM_SMITHING_TEMPLATE).save(consumer);
+        copyTemplateViaBlank(Items.WILD_ARMOR_TRIM_SMITHING_TEMPLATE).save(consumer);
+        copyTemplateViaBlank(Items.COAST_ARMOR_TRIM_SMITHING_TEMPLATE).save(consumer);
+        copyTemplateViaBlank(Items.DUNE_ARMOR_TRIM_SMITHING_TEMPLATE).save(consumer);
+        copyTemplateViaBlank(Items.WAYFINDER_ARMOR_TRIM_SMITHING_TEMPLATE).save(consumer);
+        copyTemplateViaBlank(Items.RAISER_ARMOR_TRIM_SMITHING_TEMPLATE).save(consumer);
+        copyTemplateViaBlank(Items.SHAPER_ARMOR_TRIM_SMITHING_TEMPLATE).save(consumer);
+        copyTemplateViaBlank(Items.HOST_ARMOR_TRIM_SMITHING_TEMPLATE).save(consumer);
+        copyTemplateViaBlank(Items.WARD_ARMOR_TRIM_SMITHING_TEMPLATE).save(consumer);
+        copyTemplateViaBlank(Items.SILENCE_ARMOR_TRIM_SMITHING_TEMPLATE).save(consumer);
+        copyTemplateViaBlank(Items.TIDE_ARMOR_TRIM_SMITHING_TEMPLATE).save(consumer);
+        copyTemplateViaBlank(Items.SNOUT_ARMOR_TRIM_SMITHING_TEMPLATE).save(consumer);
+        copyTemplateViaBlank(Items.RIB_ARMOR_TRIM_SMITHING_TEMPLATE).save(consumer);
+        copyTemplateViaBlank(Items.EYE_ARMOR_TRIM_SMITHING_TEMPLATE).save(consumer);
+        copyTemplateViaBlank(Items.SPIRE_ARMOR_TRIM_SMITHING_TEMPLATE).save(consumer); */
+
         encoriumSmithing(consumer, Items.NETHERITE_SWORD, RecipeCategory.COMBAT, ModItems.ENCORIUM_SWORD.get());
         encoriumSmithing(consumer, Items.NETHERITE_SHOVEL, RecipeCategory.TOOLS, ModItems.ENCORIUM_SHOVEL.get());
         encoriumSmithing(consumer, Items.NETHERITE_PICKAXE, RecipeCategory.TOOLS, ModItems.ENCORIUM_PICKAXE.get());
@@ -50,6 +72,16 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         canesSmithing(consumer, Items.IRON_SWORD, Items.REDSTONE_BLOCK, RecipeCategory.COMBAT, ModItems.AGILE_SWORD.get());
         canesSmithing(consumer, Items.STONE_SWORD, Items.OBSIDIAN, RecipeCategory.COMBAT, ModItems.OBSIDIAN_SWORD.get());
         canesSmithing(consumer, Items.SHIELD, Items.DIAMOND, RecipeCategory.COMBAT, ModItems.DIAMOND_SHIELD.get());
+
+        canesSmithing(consumer, Items.IRON_SWORD, Items.GOLDEN_SWORD, RecipeCategory.COMBAT, ModItems.GILDED_SWORD.get());
+        canesSmithing(consumer, Items.IRON_SHOVEL, Items.GOLDEN_SHOVEL, RecipeCategory.TOOLS, ModItems.GILDED_SHOVEL.get());
+        canesSmithing(consumer, Items.IRON_PICKAXE, Items.GOLDEN_PICKAXE, RecipeCategory.TOOLS, ModItems.GILDED_PICKAXE.get());
+        canesSmithing(consumer, Items.IRON_AXE, Items.GOLDEN_AXE, RecipeCategory.TOOLS, ModItems.GILDED_AXE.get());
+        canesSmithing(consumer, Items.IRON_HOE, Items.GOLDEN_HOE, RecipeCategory.TOOLS, ModItems.GILDED_HOE.get());
+        canesSmithing(consumer, Items.IRON_HELMET, Items.GOLDEN_HELMET, RecipeCategory.COMBAT, ModItems.GILDED_HELMET.get());
+        canesSmithing(consumer, Items.IRON_CHESTPLATE, Items.GOLDEN_CHESTPLATE, RecipeCategory.COMBAT, ModItems.GILDED_CHESTPLATE.get());
+        canesSmithing(consumer, Items.IRON_LEGGINGS, Items.GOLDEN_LEGGINGS, RecipeCategory.COMBAT, ModItems.GILDED_LEGGINGS.get());
+        canesSmithing(consumer, Items.IRON_BOOTS, Items.GOLDEN_BOOTS, RecipeCategory.COMBAT, ModItems.GILDED_BOOTS.get());
 
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.ENCORIUM_TEMPLATE_ITEM.get())
                 .define('n', Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE)
@@ -74,7 +106,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     }
 
         public static ShapelessRecipeBuilder copyTemplateViaBlank(Item template) {
-            return ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, template, 2).requires(template).requires(ModItems.TEMPLATE_BLANK.get()).unlockedBy("has_blank", has(ModItems.TEMPLATE_BLANK.get()));
+            return ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, template, 2).requires(template).requires(ModItems.TEMPLATE_BLANK.get()).group("copied_via_blank").unlockedBy("has_blank", has(ModItems.TEMPLATE_BLANK.get()));
         }
 
         protected static void canesSmithing(Consumer<FinishedRecipe> pFinishedRecipeConsumer, Item pIngredientItem, Item upgradeCatalyst, RecipeCategory pCategory, Item pResultItem) {

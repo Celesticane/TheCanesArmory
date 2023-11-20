@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:golden_boots"
+  },
+  "base": {
+    "item": "minecraft:iron_boots"
+  },
+  "result": {
+    "item": "thecanesarmory:gilded_boots"
+  },
+  "template": {
+    "item": "thecanesarmory:canes_upgrade_smithing_template"
+  }
+}
