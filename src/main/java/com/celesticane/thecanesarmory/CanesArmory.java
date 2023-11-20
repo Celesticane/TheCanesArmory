@@ -1,10 +1,17 @@
 package com.celesticane.thecanesarmory;
 
 import com.celesticane.thecanesarmory.block.ModBlocks;
+import com.celesticane.thecanesarmory.event.ModEvents;
 import com.celesticane.thecanesarmory.item.ModItems;
+import com.celesticane.thecanesarmory.loot.ModLootModifiers;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.model.Model;
+import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.client.renderer.item.ClampedItemPropertyFunction;
+import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
@@ -55,6 +62,7 @@ public class CanesArmory
 
         ModBlocks.register(modEventBus);
         ModItems.register(modEventBus);
+        ModLootModifiers.register(modEventBus);
         MinecraftForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::addCreative);
         // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
@@ -86,9 +94,15 @@ public class CanesArmory
             event.accept(ModBlocks.TIMELESS_DEBRIS);
             event.accept(ModItems.RAW_ENCORIUM);
             event.accept(ModItems.ENCORIUM);
+            event.accept(ModItems.CANES_TEMPLATE_ITEM);
+            event.accept(ModItems.ENCORIUM_TEMPLATE_ITEM);
             event.accept(ModItems.TEMPLATE_BLANK);
         }
         if(event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
+            event.accept(ModItems.GILDED_SHOVEL);
+            event.accept(ModItems.GILDED_PICKAXE);
+            event.accept(ModItems.GILDED_AXE);
+            event.accept(ModItems.GILDED_HOE);
             event.accept(ModItems.NETHERITE_DETECTOR);
             event.accept(ModItems.ENCORIUM_DETECTOR);
             event.accept(ModItems.ENCORIUM_SHOVEL);
@@ -98,8 +112,16 @@ public class CanesArmory
         }
         if(event.getTabKey() == CreativeModeTabs.COMBAT) {
             event.accept(ModItems.AGILE_SWORD);
-            event.accept(ModItems.OBSIDIAN_SWORD);
+            event.accept(ModItems.GILDED_SWORD);
             event.accept(ModItems.ENCORIUM_SWORD);
+            event.accept(ModItems.OBSIDIAN_SWORD);
+            event.accept(ModItems.DIAMOND_SHIELD);
+            event.accept(ModItems.GILDED_AXE);
+            event.accept(ModItems.ENCORIUM_AXE);
+            event.accept(ModItems.GILDED_HELMET);
+            event.accept(ModItems.GILDED_CHESTPLATE);
+            event.accept(ModItems.GILDED_LEGGINGS);
+            event.accept(ModItems.GILDED_BOOTS);
             event.accept(ModItems.ENCORIUM_HELMET);
             event.accept(ModItems.ENCORIUM_CHESTPLATE);
             event.accept(ModItems.ENCORIUM_LEGGINGS);
@@ -126,6 +148,13 @@ public class CanesArmory
             // Some client setup code
             LOGGER.info("HELLO FROM CLIENT SETUP");
             LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
+            event.enqueueWork(() -> {
+                ClampedItemPropertyFunction func = (stack, level, entity, layer) ->
+                        entity != null && entity.isBlocking() && entity.getUseItem() == stack ? 1.0F : 0.0F;
+                ItemProperties.register(ModItems.DIAMOND_SHIELD.get(), new ResourceLocation(CanesArmory.MODID, "blocking"), func);
+
+            });
+
         }
     }
 }

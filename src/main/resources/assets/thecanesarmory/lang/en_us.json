@@ -1,6 +1,18 @@
 {
   "item.thecanesarmory.agile_sword": "Agile Sword",
   "item.thecanesarmory.obsidian_sword": "Obsidian Sword",
+  "item.thecanesarmory.diamond_shield": "Diamond Shield",
+
+  "item.thecanesarmory.gilded_sword": "Gilded Sword",
+  "item.thecanesarmory.gilded_shovel": "Gilded Shovel",
+  "item.thecanesarmory.gilded_pickaxe": "Gilded Pickaxe",
+  "item.thecanesarmory.gilded_axe": "Gilded Axe",
+  "item.thecanesarmory.gilded_hoe": "Gilded Hoe",
+
+  "item.thecanesarmory.gilded_helmet": "Gilded Helmet",
+  "item.thecanesarmory.gilded_chestplate": "Gilded Chestplate",
+  "item.thecanesarmory.gilded_leggings": "Gilded Leggings",
+  "item.thecanesarmory.gilded_boots": "Gilded Boots",
 
   "block.thecanesarmory.timeless_debris": "Timeless Debris",
   "block.thecanesarmory.encorium_block": "Block of Encorium",
@@ -20,5 +32,18 @@
   "item.thecanesarmory.relic_detector": "Relic Detector",
   "item.thecanesarmory.relic_detector_plus": "Relic Detector+",
 
-  "item.thecanesarmory.smithing_template_blank": "Smithing Template Blank"
+  "item.thecanesarmory.smithing_template_blank": "Smithing Template Blank",
+  "item.thecanesarmory.encorium_upgrade_smithing_template": "Smithing Template",
+
+  "upgrade.minecraft.encorium_upgrade": "Encorium Upgrade",
+  "item.thecanesarmory.smithing_template.encorium_upgrade.applies_to": "Netherite Equipment",
+  "item.thecanesarmory.smithing_template.encorium_upgrade.ingredients": "Encorium Ingot",
+  "item.thecanesarmory.smithing_template.encorium_upgrade.base_slot_description": "Add netherite armor, weapon, or tool",
+  "item.thecanesarmory.smithing_template.encorium_upgrade.additions_slot_description": "Add Encorium Ingot",
+
+  "upgrade.minecraft.canes_upgrade": "The Cane's Upgrade",
+  "item.thecanesarmory.smithing_template.canes_upgrade.applies_to": "Tools & Equipment",
+  "item.thecanesarmory.smithing_template.canes_upgrade.ingredients": "???",
+  "item.thecanesarmory.smithing_template.canes_upgrade.base_slot_description": "Add armor, weapon, or tool",
+  "item.thecanesarmory.smithing_template.canes_upgrade.additions_slot_description": "Add ???"
 }

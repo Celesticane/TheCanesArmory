@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:golden_chestplate"
+  },
+  "base": {
+    "item": "minecraft:iron_chestplate"
+  },
+  "result": {
+    "item": "thecanesarmory:gilded_chestplate"
+  },
+  "template": {
+    "item": "thecanesarmory:canes_upgrade_smithing_template"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:diamond"
+  },
+  "base": {
+    "item": "minecraft:shield"
+  },
+  "result": {
+    "item": "thecanesarmory:diamond_shield"
+  },
+  "template": {
+    "item": "thecanesarmory:canes_upgrade_smithing_template"
+  }
+}

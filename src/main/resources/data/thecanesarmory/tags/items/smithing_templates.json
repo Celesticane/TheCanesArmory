@@ -2,6 +2,8 @@
      "replace": false,
      "values": [
        "minecraft:armor_trims",
-       "minecraft:netherite_upgrade_smithing_template"
+       "thecanesarmory:canes_upgrade_smithing_template",
+       "minecraft:netherite_upgrade_smithing_template",
+       "thecanesarmory:encorium_upgrade_smithing_template"
     ]
 }

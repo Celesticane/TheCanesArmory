@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_blank": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "thecanesarmory:smithing_template_blank"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "thecanesarmory:encorium_upgrade_smithing_template"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_blank",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "thecanesarmory:encorium_upgrade_smithing_template"
+    ]
+  },
+  "sends_telemetry_event": false
+}
